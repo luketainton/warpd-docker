@@ -1,4 +1,6 @@
 # warpd-docker
+[![DepShield Badge](https://depshield.sonatype.org/badges/luketainton/warpd-docker/depshield.svg)](https://depshield.github.io)
+
 Dockerised version of the warpd server.
 
 
