@@ -1,5 +1,7 @@
 # warpd-docker
 
+[![DeepSource](https://static.deepsource.io/deepsource-badge-light-mini.svg)](https://deepsource.io/gh/luketainton/warpd-docker/?ref=repository-badge)
+
 Dockerised version of the warpd server.
 
 
