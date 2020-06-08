@@ -1,11 +1,11 @@
 FROM golang:alpine as build
 RUN apk update
-RUN apk add git=2.24.1-r0 --no-cache
+RUN apk add git --no-cache
 RUN go get -u github.com/spolu/warp/daemon/cmd/warpd
 
-FROM golang:alpine
+FROM gcr.io/distroless/base
 LABEL maintainer="Luke Tainton <luke@tainton.uk>"
-COPY --from=build-env /go/bin/warpd /go/bin/warpd
-WORKDIR /go/bin
-CMD ["warpd"]
+COPY --from=build /go/bin/warpd /warpd
+CMD ["/warpd"]
 EXPOSE 4242/tcp
+
