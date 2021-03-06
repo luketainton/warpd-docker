@@ -1,6 +1,6 @@
 FROM golang:alpine as build
 RUN apk update
-RUN apk add git=2.26.2-r0 --no-cache
+RUN apk add git --no-cache
 RUN go get -u github.com/spolu/warp/daemon/cmd/warpd
 WORKDIR /go/bin
 
