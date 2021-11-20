@@ -4,7 +4,7 @@ RUN apk add git --no-cache
 RUN go get -u github.com/spolu/warp/daemon/cmd/warpd
 WORKDIR /go/bin
 
-FROM golang:alpine
+FROM alpine
 LABEL maintainer="Luke Tainton <luke@tainton.uk>"
 LABEL org.opencontainers.image.source="https://github.com/luketainton/warpd-docker"
 COPY --from=build /go/bin /
