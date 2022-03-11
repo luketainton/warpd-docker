@@ -10,8 +10,8 @@ software was taken down and users now need to host their own.
 
 ## How do I use this?
 1. Install Docker. See the [documentation](https://docs.docker.com/install) for more information.
-2. Run `docker pull ghcr.io/luketainton/warpd:latest` to pull the latest image.
-3. Run `docker run -d -p 4242:4242 ghcr.io/luketainton/warpd:latest` to run a container.
+2. Run `docker pull registry.gitlab.com/luketainton/warpd-docker:latest` to pull the latest image.
+3. Run `docker run -d -p 4242:4242 registry.gitlab.com/luketainton/warpd-docker:latest` to run a container.
 
 
 ## How do I connect my client?
