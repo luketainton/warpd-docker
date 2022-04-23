@@ -24,7 +24,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Login to GitHub Container Registry
-      run: echo ${{ secrets.PAT }} | docker login ghcr.io -u luketainton --password-stdin
+      run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u luketainton --password-stdin
     - name: Build image for GitHub Container Registry
       run: docker build . --file Dockerfile --tag ghcr.io/luketainton/warpd:${{ needs.prepare-data.outputs.tag }} --tag ghcr.io/luketainton/warpd:latest
     - name: Push image to GitHub Container Registry
