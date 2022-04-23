@@ -1,7 +1,7 @@
 FROM golang:alpine as build
 RUN apk update
 RUN apk add git --no-cache
-RUN go get -u github.com/spolu/warp/daemon/cmd/warpd
+RUN go install github.com/spolu/warp/daemon/cmd/warpd@latest
 WORKDIR /go/bin
 
 FROM alpine
